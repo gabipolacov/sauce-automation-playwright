@@ -10,7 +10,11 @@ The tests are grouped using 'test.describe.serial' to keep the purchase flow tes
 Challenges Encountered
 
 •	Initial test design assumed execution order, this was corrected by using 'beforeEach' to ensure each test starts from a clean state.
+
 •	Some selectors matched multiple elements, which caused test failures. This was fixed by using more specific selectors.
+
 •	Assertions were initially applied to string values instead of locators, which caused unreliable test results. This was fixed by asserting directly on locators.
+
 •	Cart state does not persist between tests due to isolated browser contexts, so required setup (adding items) was repeated where needed.
+
 •	More complex implementations were considered but simplified to keep the tests clear, readable, and appropriate for a technical challenge. For example, adding products to the cart using for loop and dynamic counters to assert the number of items added to the cart was considered, but a direct and explicit approach was chosen for the technical challenge.
