@@ -37,7 +37,8 @@ test.describe.serial('Purchase flow', () => {
 
         await page.click('[data-test="shopping-cart-link"]');
 
-        await expect(page.locator('.inventory_item_name')).toContainText([productName1, productName2]);
+        const cartItems = await page.locator('.inventory_item_name').allTextContents();
+        expect(cartItems).toEqual(expect.arrayContaining([productName1, productName2]));
     });
 
 
