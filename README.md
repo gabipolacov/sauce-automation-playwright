@@ -1,4 +1,5 @@
 This set of automated test cases contains:
+
 •	Login test: Verifies that the user is able to log in successfully and validates that the user is redirected to the '/inventory.html' page. This logic is executed in a 'beforeEach' hook to ensure that all tests start from a logged-in state and remain independent from each other.
 •	Add items to cart test: Verifies that the user can add items to the cart correctly. When selecting products from the catalog, the product names are stored in variables and later validated in the cart to ensure the correct items were added. Additionally, this test validates that the cart badge displays the correct number of added products.
 •	Checkout items test: Verifies that the user is not able to proceed with the checkout process without providing the required checkout information. An error message is expected to be displayed when attempting to continue without filling in the mandatory fields.
